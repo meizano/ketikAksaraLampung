@@ -46,56 +46,56 @@ body {
   }
 }
 
+.key {
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin: 0.06rem;
+  padding: .01rem .01rem;
+  transition: all 0.15s;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background: #666;
+  text-shadow: 0 0 5px #aaa;
+  user-select: none;
+}
+
+.kbd {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.key-fonem {
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffc000;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .page {
+    max-width: 80em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .key {
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    margin: 0.06rem;
-    padding: .01rem .01rem;
-    transition: all 0.15s;
-    width: 2rem;
-    height: 2rem;
-    line-height: 1;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    background: #666;
-    text-shadow: 0 0 5px #aaa;
-    user-select: none;
+    width: 3rem;
+    height: 3rem;
   }
 
   .kbd {
-    display: block;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   .key-fonem {
-    font-size: 0.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffc000;
+    font-size: 0.6rem;
   }
 
-  @media only screen and (min-width: 768px) {
-
-    .page {
-      max-width: 80em;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .key {
-      width: 3rem;
-      height: 3rem;
-    }
-
-    .kbd {
-      font-size: 2rem;
-    }
-
-    .key-fonem {
-      font-size: 0.6rem;
-    }
-  
 }
 
 .tekan {

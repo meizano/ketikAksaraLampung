@@ -2,154 +2,154 @@
 <html lang="id">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ketik Aksara Lampung">
-    <meta name="author" content="Meizano">
-    <meta name="theme-color" content="#f3f121" />
-    <title>Ketik Aksara Lampung</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-    <link rel="manifest" href="./manifest.json">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Ketik Aksara Lampung">
+        <meta name="author" content="Meizano">
+        <meta name="theme-color" content="#f3f121" />
+        <title>Ketik Aksara Lampung</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="manifest" href="./manifest.json">
 </head>
 
 <body>
-    <div class="container">
-        <div class="page">
-                <h1 class="title" id="judulAplikasi">Ketik Aksara Lampung</h1>
-                <form id="terjemahForm">
-                    <fieldset>
-                        <div class="form-group">
-                            <input id="kataAsal" class="form-control" placeholder="Kata/kalimat yang ditransliterasikan"
-                                name="kataAsal" type="text" autofocus required>
-                            <input id="aksaraAsal" class="form-control" placeholder="Aksara yang ditransliterasikan"
-                                name="aksaraAsal" type="text" autocomplete="off" onfocus="blur();">
-                        </div>
-                    </fieldset>
-                </form>
+        <div class="container">
+                <div class="page">
+                        <h1 class="title" id="judulAplikasi">Ketik Aksara Lampung</h1>
+                        <form id="terjemahForm">
+                                <fieldset>
+                                        <div class="form-group">
+                                                <input id="kataAsal" class="form-control" placeholder="Kata/kalimat yang ditransliterasikan"
+                                                        name="kataAsal" type="text" autofocus required>
+                                                <input id="aksaraAsal" class="form-control" placeholder="Aksara yang ditransliterasikan"
+                                                        name="aksaraAsal" type="text" autocomplete="off" onfocus="blur();">
+                                        </div>
+                                </fieldset>
+                        </form>
 
-        
-                <div id="hasilTerjemah">
+
+                        <div id="hasilTerjemah">
+                        </div>
+                        <div id="petunjukAksara" class="">
+                                <button type="button" class="key anak-huruf" data-key="81"><span class="aksaraLampung kbd">q</span><span
+                                                class="key-fonem"> (o) q </span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="87"><span class="aksaraLampung kbd">w</span><span
+                                                class="key-fonem"> (au) w</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="69"><span class="aksaraLampung kbd">e</span><span
+                                                class="key-fonem"> (u) e </span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="85"><span class="aksaraLampung kbd">u</span><span
+                                                class="key-fonem"> (e) u</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="73"><span class="aksaraLampung kbd">i</span><span
+                                                class="key-fonem"> (i) i</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="79"><span class="aksaraLampung kbd">o</span><span
+                                                class="key-fonem"> (é) o</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="80"><span class="aksaraLampung kbd">p</span><span
+                                                class="key-fonem"> (an) p</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="219"><span class="aksaraLampung kbd">[</span><span
+                                                class="key-fonem"> (ar) [</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="221"><span class="aksaraLampung kbd">]</span><span
+                                                class="key-fonem"> (ang) ]</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="189"><span class="aksaraLampung kbd">-</span><span
+                                                class="key-fonem"> (ai) -</span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="187"><span class="aksaraLampung kbd">=</span><span
+                                                class="key-fonem"> (ah) = </span>
+                                </button>
+                                <button type="button" class="key anak-huruf" data-key="90"><span class="aksaraLampung kbd">z</span><span
+                                                class="key-fonem"> (mati) z </span>
+                                </button>
+                                <button type="button" class="key backspace" data-key="8"><span class="aksaraLampung kbd">⬾</span><span
+                                                class="key-fonem">hapus
+                                </button>
+                                <br />
+                                <button type="button" class="key induk-huruf" data-key="82"><span class="aksaraLampung kbd">r</span><span
+                                                class="key-fonem"> (ra) r</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="84"><span class="aksaraLampung kbd">t</span><span
+                                                class="key-fonem"> (ta) t</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="89"><span class="aksaraLampung kbd">y</span><span
+                                                class="key-fonem"> (ya) y</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="65"><span class="aksaraLampung kbd">a</span><span
+                                                class="key-fonem">a</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="83"><span class="aksaraLampung kbd">s</span><span
+                                                class="key-fonem"> (sa) s</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="68"><span class="aksaraLampung kbd">d</span><span
+                                                class="key-fonem"> (da) d</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="70"><span class="aksaraLampung kbd">f</span><span
+                                                class="key-fonem"> (gha) f</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="71"><span class="aksaraLampung kbd">g</span><span
+                                                class="key-fonem"> (ga) g</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="72"><span class="aksaraLampung kbd">h</span><span
+                                                class="key-fonem"> (ha) h</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="74"><span class="aksaraLampung kbd">j</span><span
+                                                class="key-fonem"> (ja) j</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="75"><span class="aksaraLampung kbd">k</span><span
+                                                class="key-fonem"> (ka) k</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="76"><span class="aksaraLampung kbd">l</span><span
+                                                class="key-fonem"> (la) l</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="186"><span class="aksaraLampung kbd">;</span><span
+                                                class="key-fonem"> (nga) ; </span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="222"><span class="aksaraLampung kbd">s</span><span
+                                                class="key-fonem"> (nya) '</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="88"><span class="aksaraLampung kbd">x</span><span
+                                                class="key-fonem"> (wa) x</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="67"><span class="aksaraLampung kbd">c</span><span
+                                                class="key-fonem"> (ca) c</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="86"><span class="aksaraLampung kbd">v</span><span
+                                                class="key-fonem"> (pa) v</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="66"><span class="aksaraLampung kbd">b</span><span
+                                                class="key-fonem"> (ba) b</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="78"><span class="aksaraLampung kbd">n</span><span
+                                                class="key-fonem"> (na) n</span>
+                                </button>
+                                <button type="button" class="key induk-huruf" data-key="77"><span class="aksaraLampung kbd">m</span><span
+                                                class="key-fonem"> (ma) m</span>
+                                </button>
+                                <br />
+                                <button type="button" class="key space" data-key="32"></span>
+                                </button>
+                        </div>
+
                 </div>
-                <div id="petunjukAksara" class="">
-                        <button type="button" class="key backspace" data-key="8"><span class="aksaraLampung kbd">⬾</span><span
-                            class="key-fonem">hapus
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="81"><span class="aksaraLampung kbd">q</span><span
-                            class="key-fonem"> (o) q </span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="87"><span class="aksaraLampung kbd">w</span><span
-                            class="key-fonem"> (au) w</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="69"><span class="aksaraLampung kbd">e</span><span
-                            class="key-fonem"> (u) e </span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="85"><span class="aksaraLampung kbd">u</span><span
-                            class="key-fonem"> (e) u</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="73"><span class="aksaraLampung kbd">i</span><span
-                            class="key-fonem"> (i) i</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="79"><span class="aksaraLampung kbd">o</span><span
-                            class="key-fonem"> (é) o</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="80"><span class="aksaraLampung kbd">p</span><span
-                            class="key-fonem"> (an) p</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="219"><span class="aksaraLampung kbd">[</span><span
-                            class="key-fonem"> (ar) [</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="221"><span class="aksaraLampung kbd">]</span><span
-                            class="key-fonem"> (ang) ]</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="189"><span class="aksaraLampung kbd">-</span><span
-                            class="key-fonem"> (ai) -</span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="187"><span class="aksaraLampung kbd">=</span><span
-                            class="key-fonem"> (ah) = </span>
-                    </button>
-                    <button type="button" class="key anak-huruf" data-key="90"><span class="aksaraLampung kbd">z</span><span
-                            class="key-fonem"> (mati) z </span>
-                    </button>
-                    <br />
-                    <button type="button" class="key induk-huruf" data-key="82"><span class="aksaraLampung kbd">r</span><span
-                            class="key-fonem"> (ra) r</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="84"><span class="aksaraLampung kbd">t</span><span
-                            class="key-fonem"> (ta) t</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="89"><span class="aksaraLampung kbd">y</span><span
-                            class="key-fonem"> (ya) y</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="65"><span class="aksaraLampung kbd">a</span><span
-                            class="key-fonem">a</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="83"><span class="aksaraLampung kbd">s</span><span
-                            class="key-fonem"> (sa) s</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="68"><span class="aksaraLampung kbd">d</span><span
-                            class="key-fonem"> (da) d</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="70"><span class="aksaraLampung kbd">f</span><span
-                            class="key-fonem"> (gha) f</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="71"><span class="aksaraLampung kbd">g</span><span
-                            class="key-fonem"> (ga) g</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="72"><span class="aksaraLampung kbd">h</span><span
-                            class="key-fonem"> (ha) h</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="74"><span class="aksaraLampung kbd">j</span><span
-                            class="key-fonem"> (ja) j</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="75"><span class="aksaraLampung kbd">k</span><span
-                            class="key-fonem"> (ka) k</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="76"><span class="aksaraLampung kbd">l</span><span
-                            class="key-fonem"> (la) l</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="186"><span class="aksaraLampung kbd">;</span><span
-                            class="key-fonem"> (nga) ; </span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="222"><span class="aksaraLampung kbd">s</span><span
-                            class="key-fonem"> (nya) '</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="88"><span class="aksaraLampung kbd">x</span><span
-                            class="key-fonem"> (wa) x</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="67"><span class="aksaraLampung kbd">c</span><span
-                            class="key-fonem"> (ca) c</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="86"><span class="aksaraLampung kbd">v</span><span
-                            class="key-fonem"> (pa) v</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="66"><span class="aksaraLampung kbd">b</span><span
-                            class="key-fonem"> (ba) b</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="78"><span class="aksaraLampung kbd">n</span><span
-                            class="key-fonem"> (na) n</span>
-                    </button>
-                    <button type="button" class="key induk-huruf" data-key="77"><span class="aksaraLampung kbd">m</span><span
-                            class="key-fonem"> (ma) m</span>
-                    </button>
-                    <br/>
-                    <button type="button" class="key space" data-key="32"></span>
-                </button>
-                </div>
-            
         </div>
-    </div>
-    <!-- <div class="footer">
+        <!-- <div class="footer">
         <p>Hak cipta Meizano Ardhi Muhammad</p>
     </div> -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <!-- <script src="./js/jquery-1.11.3.min.js"></script> -->
-    <!-- <script src="./js/bootstrap.min.js"></script> -->
-    <!--		<script src="dispatcher/indonesia2lampung.js"></script>-->
-    <script src="./js/aksaraLampung.js"></script>
-    <script src="./js/transliterasiAksara.js"></script>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <!-- <script src="./js/jquery-1.11.3.min.js"></script> -->
+        <!-- <script src="./js/bootstrap.min.js"></script> -->
+        <!--		<script src="dispatcher/indonesia2lampung.js"></script>-->
+        <script src="./js/aksaraLampung.js"></script>
+        <script src="./js/transliterasiAksara.js"></script>
 </body>
 
 </html>

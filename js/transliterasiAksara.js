@@ -96,7 +96,7 @@ function prosesAksaraAsal(aksaraAsals) {
 window.addEventListener('keydown', function (e) {
     // console.log(e.keyCode);
     const keybutton = document.querySelector(`button[data-key="${e.keyCode}"]`);
-    
+
     if (!keybutton) return;
     ketikAksara(keybutton);
 });

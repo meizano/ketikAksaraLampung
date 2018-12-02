@@ -52,7 +52,7 @@ self.addEventListener('fetch', function (event) {
   event.respondWith(tryInCachesFirst);
 });
 
-this.addEventListener('fetch', function(e) {
+this.addEventListener('fetch', function (e) {
   var tryInCachesFirst = caches.open(VERSION).then(cache => {
     return cache.match(e.request).then(response => {
       if (!response) {
