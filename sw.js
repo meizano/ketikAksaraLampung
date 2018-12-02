@@ -1,4 +1,4 @@
-var VERSION = "KetikAksaraLampung-v20181201";
+var VERSION = "KetikAksaraLampung-v20181202";
 
 var fileCache = [
   // './',
@@ -7,7 +7,7 @@ var fileCache = [
   './js/transliterasiAksara.js',
   './css/bootstrap.min.css',
   './css/style.css',
-  './fonts/aksara-Lampung-Unila-v2.ttf'
+  './fonts/aksara-Lampung-Unila-v4rev2.ttf'
 ];
 
 
