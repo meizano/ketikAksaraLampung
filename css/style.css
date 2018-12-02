@@ -93,6 +93,10 @@ body {
   background-color: #ff55aa;
 }
 
+.space {
+  width: 20rem;
+}
+
 .hasil-transliterasi {
   display: block;
   position: relative;

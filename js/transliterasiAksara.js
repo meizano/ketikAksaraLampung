@@ -96,7 +96,7 @@ function prosesAksaraAsal(aksaraAsals) {
 window.addEventListener('keydown', function (e) {
     // console.log(e.keyCode);
     const keybutton = document.querySelector(`button[data-key="${e.keyCode}"]`);
-    // this.console.log(keybutton.getAttribute("data-key"));
+    
     if (!keybutton) return;
     ketikAksara(keybutton);
 });
@@ -107,12 +107,15 @@ function removeTransition(e) {
 }
 
 function ketikAksara(e) {
-    // console.log(e);
+    const keyCode = e.getAttribute("data-key");
     const keychar = e.querySelector(".kbd");
 
     // console.log(keychar.textContent);
 
-    if (keychar.textContent === "⬾") {
+    if (keyCode === "32") {
+        aksaraAsal.value += " ";
+    } else
+    if (keyCode === "8") {
         aksaraAsal.value = aksaraAsal.value.slice(0, -1);
     } else {
         aksaraAsal.value += keychar.textContent;
