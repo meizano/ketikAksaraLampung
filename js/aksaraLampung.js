@@ -149,8 +149,9 @@ function alfabetkan(aksaraLampung) {
     // Kombinasi anak huruf yang perlu dipertimbangkan
     // eu, ei, ou, oi, iu, io, eo
 
-    // anak huruf Tekelungau harus sebelum induk huruf wa
+    // anak huruf harus sebelum induk huruf
     kata = kata.replace(regexTekelungau, 'u');
+    kata = kata.replace(regexDatasan, 'n');
 
     // Induk huruf
     kata = kata.replace(regexA, 'a');
@@ -195,7 +196,6 @@ function alfabetkan(aksaraLampung) {
         });
     kata = kata.replace(regexTekelubang, 'ng');
     kata = kata.replace(regexRejunjung, 'r');
-    kata = kata.replace(regexDatasan, 'n');
     kata = kata.replace(regexTekelungai, 'i');
     kata = kata.replace(regexKeleniah, 'h');
 
