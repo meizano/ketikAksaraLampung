@@ -141,6 +141,7 @@ body {
   border-radius: .25rem;
   line-height: 1.25;
   text-align: left;
+  height: 40vh;
 }
 
 .form-control {

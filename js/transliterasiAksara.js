@@ -21,8 +21,8 @@ kataAsal.onkeyup = function () {
     // Jika spasi saja, tidak diproses
     if (!kataAsals.replace(/\s/g, '').length) {
         hasilTerjemah.innerHTML = 'Silakan mengaksarakan';
-        hasilTerjemah.classList.remove("alert", "alert-info", "alert-warning");
-        hasilTerjemah.classList.add("alert", "alert-info");
+        // hasilTerjemah.classList.remove("alert", "alert-info", "alert-warning");
+        // hasilTerjemah.classList.add("alert", "alert-info");
     } else {
         // Mengubah kata/kalimat yang diketik menjadi array String
         let kataAl = kataAsals.split(/\s+/);
@@ -33,7 +33,7 @@ kataAsal.onkeyup = function () {
 
         //Mengosongkan nilai dan menghilangkan style
         hasilTerjemah.innerHTML = '';
-        hasilTerjemah.classList.remove("alert", "alert-info", "alert-warning");
+        // hasilTerjemah.classList.remove("alert", "alert-info", "alert-warning");
         let strong = createNode("strong");
         strong.innerHTML = kataAsal.value + ' : <br/>';
         let spanAksara = createNode('span');
@@ -46,7 +46,7 @@ kataAsal.onkeyup = function () {
             spanAksara.innerHTML += aksarakan(kataAl[i]) + ' ';
         }
 
-        hasilTerjemah.classList.add("alert", "alert-info");
+        // hasilTerjemah.classList.add("alert", "alert-info");
     }
 };
 
@@ -63,8 +63,8 @@ function prosesAksaraAsal(aksaraAsals) {
     if (!aksaraAsals.replace(/\s/g, '').length) {
         aksaraAsal.classList.remove("aksaraLampung");
         hasilTerjemah.innerHTML = 'Silakan mengaksarakan';
-        hasilTerjemah.classList.remove("hasil-transliterasi");
-        hasilTerjemah.classList.add("hasil-transliterasi");
+        // hasilTerjemah.classList.remove("hasil-transliterasi");
+        // hasilTerjemah.classList.add("hasil-transliterasi");
     } else {
         aksaraAsal.classList.add("aksaraLampung");
         // Mengubah kata/kalimat yang diketik menjadi array String
@@ -76,7 +76,7 @@ function prosesAksaraAsal(aksaraAsals) {
 
         //Mengosongkan nilai dan menghilangkan style
         hasilTerjemah.innerHTML = '';
-        hasilTerjemah.classList.remove("hasil-transliterasi");
+        // hasilTerjemah.classList.remove("hasil-transliterasi");
         let strong = createNode("strong");
         strong.innerHTML = alfabetkan(aksaraAsal.value) + ' : <br/>';
         let spanAksara = createNode('span');
@@ -89,7 +89,7 @@ function prosesAksaraAsal(aksaraAsals) {
             spanAksara.innerHTML += aksaraAl[i] + ' ';
         }
 
-        hasilTerjemah.classList.add("hasil-transliterasi");
+        // hasilTerjemah.classList.add("hasil-transliterasi");
     }
 }
 
