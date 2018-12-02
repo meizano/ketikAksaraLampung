@@ -69,10 +69,14 @@ body {
 }
 
 .key-fonem {
-  font-size: 0.4rem;
+  font-size: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffc000;
+}
+
+.keymap {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -84,8 +88,8 @@ body {
   }
 
   .key {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   .kbd {
@@ -93,7 +97,11 @@ body {
   }
 
   .key-fonem {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .keymap {
+    display: inline;
   }
 
 }
