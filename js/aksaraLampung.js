@@ -1,6 +1,18 @@
 function aksarakan(kataLampung) {
     var aksara = kataLampung;
 
+    const aksaraA = `a`;
+    const nga = `;`;
+    const nya = `'`;
+    const gha = `f`;
+    const ang = `]`;
+    const an = `p`;
+    const ah = `=`;
+    const ar = `[`;
+    const ai = `-`;
+    const au = `w`;
+    const nengen = `z`;
+
     const regexng = /(ng)[aiueoAIUEO]/g;
     const regexny = /(ny)[aiueoAIUEOkKQqgpPfFvVbBmMtTdDcCjJzZyYlLsSwWGHh]/g;
     const regexgh = /(gh)[aiueoAIUEOkKQqgpPfFvVbBmMtTdDcCjJzZyYlLsSwWGHh]/g;
@@ -30,86 +42,67 @@ function aksarakan(kataLampung) {
     const regexawal = /^[iIuUeEoOXNAR]/g; 
 
     aksara = aksara.replace(regexng, function (a) {
-        return 'G' + (a[2] ? a[2]  : '');
+        return nga + (a[2] ? a[2]  : '');
         });
-    console.log('G ' + aksara);
     aksara = aksara.replace(regexny, function (a) {
-        return 'Y' + (a[2] ? a[2]  : '');
+        return nya + (a[2] ? a[2]  : '');
         });
-    console.log('Y ' + aksara);
     aksara = aksara.replace(regexgh, function (a) {
-        return 'H' + (a[2] ? a[2]  : '');
+        return gha + (a[2] ? a[2]  : '');
         });
-    console.log('H ' + aksara);
-    
     aksara = aksara.replace(regexang, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'X' + (a[2] ? a[2]  : '');
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + ang + (a[2] ? a[2]  : '');
     });
-    console.log('X ' + aksara);
     aksara = aksara.replace(regexan, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'N' + (a[2] ? a[2]  : '');
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + an + (a[2] ? a[2]  : '');
     });
-    console.log('N ' + aksara);
     aksara = aksara.replace(regexah, function (a) {
-        return (a[0].search(regexvocal) != -1 ? a[0]  : '') + 'A' + (a[2] ? a[2]  : '');
+        return (a[0].search(regexvocal) != -1 ? a[0]  : '') + ah + (a[2] ? a[2]  : '');
     });
-    console.log('A ' + aksara);
     aksara = aksara.replace(regexar, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'R' + (a[2] ? a[2]  : '');
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + ar + (a[2] ? a[2]  : '');
     });
-    console.log('R ' + aksara);
     aksara = aksara.replace(regexai, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'I' + (a[2] ? a[2]  : '');
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + ai + (a[2] ? a[2]  : '');
     });
-    console.log('I ' + aksara);
     aksara = aksara.replace(regexau, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'U' + (a[2] ? a[2]  : '');
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + au + (a[2] ? a[2]  : '');
     });
-    console.log('U ' + aksara);
 
     aksara = aksara.replace(regexxawal, function (a) {
-        return a[0] + a[1] + "x" + a[2] + a[3];
+        return a[0] + a[1] + nengen + a[2] + a[3];
     }); // karakter 1 dan 2 tidak dihapus, harusnya ditambahkan karakter 3 yaitu x
-    console.log('/ awal ' + aksara);
-
+    
     aksara = aksara.replace(regexx, function (a) {
-        return (a.search(regextandabaca) != -1  ? a.substring(0, a.length-1) + "x" + a.substring(a.length-1) : a + "x") ;
+        return (a.search(regextandabaca) != -1  ? a.substring(0, a.length-1) + nengen + a.substring(a.length-1) : a + nengen) ;
     }); // karakter 1 dan 2 tidak dihapus, harusnya ditambahkan karakter 3 yaitu x
-    console.log('/ ' + aksara);
-
+    
     aksara = aksara.replace(regexangx, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'X';
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + nengen;
     });
-    console.log('X ' + aksara);
     aksara = aksara.replace(regexanx, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'N';
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + an;
     });
-    console.log('N ' + aksara);
     aksara = aksara.replace(regexahx, function (a) {
-        return (a[0].search(regexvocal) != -1 ? a[0]  : '') + 'A';
+        return (a[0].search(regexvocal) != -1 ? a[0]  : '') + ah;
     });
-    console.log('A ' + aksara);
     aksara = aksara.replace(regexarx, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'R';
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + ar;
     });
-    console.log('R ' + aksara);
     aksara = aksara.replace(regexaix, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'I';
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + ai;
     });
-    console.log('I ' + aksara);
     aksara = aksara.replace(regexaux, function (a) {
-        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + 'U';
+        return (a[0].search(regexvocal) != -1  ? a[0]  : '') + au;
     });
-    console.log('U ' + aksara);
-   
+    
     aksara = aksara.replace(regexa, function (a) {
         return a[0] + (a[2] ? a[2]  : '');
     }); //karakter 1 dan 3 harusnya tidak dihapus
-    console.log('a ' + aksara);
+    
     aksara = aksara.replace(regexawal, function (a) {
-        return "a" + a;
+        return aksaraA + a;
     }); // Ditambahkan karakter a di depan
-    console.log('awal ' + aksara);
     
     return aksara;
 };
@@ -118,43 +111,46 @@ function alfabetkan(aksaraLampung) {
     var kata = aksaraLampung;
 
     // Induk Huruf
-    const regexKa = /[KkQq]/g;
-    const regexGa = /[g]/g;
-    const regexNga = /[G]/g;
-    const regexPa = /[PpFfvV]/g;
+    const regexKa = /[Kk]/g;
+    const regexGa = /[Gg]/g;
+    const regexNga = /\;/g;
+    const regexPa = /[Vv]/g;
     const regexBa = /[Bb]/g;
     const regexMa = /[Mm]/g;
     const regexTa = /[Tt]/g;
     const regexDa = /[Dd]/g;
-    const regexNa = /[n]/g;
+    const regexNa = /[Nn]/g;
     const regexCa = /[Cc]/g;
-    const regexJa = /[JjZz]/g;
-    const regexNya = /[Y]/g;
-    const regexYa = /[y]/g;
-    const regexA = /[a]/g;
+    const regexJa = /[Jj]/g;
+    const regexNya = /\'/g;
+    const regexYa = /[Yy]/g;
+    const regexA = /[Aa]/g;
     const regexLa = /[Ll]/g;
     const regexRa = /[Rr]/g;
     const regexSa = /[Ss]/g;
-    const regexWa = /[wVv]/g;
-    const regexHa = /[h]/g;
-    const regexGha = /[H]/g;
+    const regexWa = /[Xx]/g;
+    const regexHa = /[Hh]/g;
+    const regexGha = /[Ff]/g;
 
     // Anak Huruf
-    const regexNengen = /a[x]/g;
-    const regexUlan1 = /a[i]/g;
-    const regexUlan2 = /a[E]/g;
-    const regexBicek = /a[e]/g;
-    const regexBitan1 = /a[Oo]/g;
-    const regexBitan2 = /a[u]/g;
-    const regexTekelubang = /X/g;
-    const regexRejunjung = /R/g;
-    const regexDatasan = /N/g;
-    const regexTekelungau = /U/g;
-    const regexTekelungai = /I/g;
-    const regexKeleniah = /A/g;
+    const regexNengen = /a[Zz]/g;
+    const regexUlan1 = /a[Ii]/g;
+    const regexUlan2 = /a[Oo]/g;
+    const regexBicek = /a[Uu]/g;
+    const regexBitan1 = /a[Qq]/g;
+    const regexBitan2 = /a[Ee]/g;
+    const regexTekelubang = /\]/g;
+    const regexRejunjung = /\[/g;
+    const regexDatasan = /[Pp]/g;
+    const regexTekelungau = /[Ww]/g;
+    const regexTekelungai = /\-/g;
+    const regexKeleniah = /\=/g;
 
     // Kombinasi anak huruf yang perlu dipertimbangkan
     // eu, ei, ou, oi, iu, io, eo
+
+    // anak huruf Tekelungau harus sebelum induk huruf wa
+    kata = kata.replace(regexTekelungau, 'u');
 
     // Induk huruf
     kata = kata.replace(regexA, 'a');
@@ -200,7 +196,6 @@ function alfabetkan(aksaraLampung) {
     kata = kata.replace(regexTekelubang, 'ng');
     kata = kata.replace(regexRejunjung, 'r');
     kata = kata.replace(regexDatasan, 'n');
-    kata = kata.replace(regexTekelungau, 'u');
     kata = kata.replace(regexTekelungai, 'i');
     kata = kata.replace(regexKeleniah, 'h');
 

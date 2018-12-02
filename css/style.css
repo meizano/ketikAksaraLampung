@@ -1,6 +1,13 @@
+body {
+  margin: 0.1em;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'AksaraLampung';
-  src: url('../fonts/aksara-Lampung-Unila-v2.ttf') format('truetype');
+  src: url('../fonts/aksara-Lampung-Unila-v4rev2.ttf') format('truetype');
 }
 
 .aksaraLampung {
@@ -20,13 +27,13 @@
   text-align: center;
 }
 
-.btn {
-  margin: 0.1rem;
-  font-size: 0.7rem;
-}
-
 #hasilTerjemah ul {
   list-style: none unset none;
+}
+
+/* For mobile phones: */
+#judulAplikasi {
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 768px) {
@@ -34,5 +41,129 @@
   /* For mobile phones: */
   #judulAplikasi {
     display: none;
+    text-shadow: 0 0 5px darkred;
   }
+}
+
+.key {
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin: 0.1rem;
+  font-size: 1.5rem;
+  padding: .1rem .1rem;
+  transition: all 0.15s;
+  width: 4rem;
+  height: 4rem;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background: #666;
+  text-shadow: 0 0 5px #aaa;
+  user-select: none;
+}
+
+.kbd {
+  display: block;
+  font-size: 2rem;
+}
+
+.key-fonem {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffc000;
+}
+
+.tekan {
+  transform: scale(1.1);
+  border-color: #006cff;
+  box-shadow: 0 0 10px #006cff;
+}
+
+.induk-huruf {
+  background-color: #666;
+}
+
+.anak-huruf {
+  background-color: #000;
+}
+
+.backspace {
+  background-color: #ff55aa;
+}
+
+.hasil-transliterasi {
+  display: block;
+  position: relative;
+  color: #000;
+  background-color: #CCC;
+  border-color: #CCC;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input {
+  overflow: visible;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+
+.container {
+  display: flex;
+  height:100vh; /* memakai seluruh tinggi yang tampil di layar */
+  flex-direction:column; /* Agar flex-grow dapat memakai seluruh ruang tersisa */
+  background-color: beige;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+      max-width: 80em;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.page {
+    background-color: beige;
+    flex-grow: 1; /* Memakai seluruh ruang tersisa */
+}
+
+.footer {
+    flex: 0 1 content; /* selalu menyediakan ruang di paling bawah */
+    background-color: darkred;
+    color:white;
+    text-align: center;
 }

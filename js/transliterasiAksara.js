@@ -10,6 +10,7 @@ function append(parent, el) {
     return parent.appendChild(el); // Append parameter kedua ke yang pertama
 };
 
+var kataAsal = document.getElementById('kataAsal');
 var aksaraAsal = document.getElementById('aksaraAsal');
 var petunjukAksara = document.getElementById('petunjukAksara');
 
@@ -50,15 +51,20 @@ kataAsal.onkeyup = function () {
 };
 
 aksaraAsal.onkeyup = function () {
+    prosesAksaraAsal(aksaraAsal.value);
+    aksaraAsal.blur(); // blur agar soft keyboard dari os tidak tampil otomatis
+    aksaraAsal.focus(); // blur agar soft keyboard dari os tidak tampil otomatis
 
-    let aksaraAsals = aksaraAsal.value;
 
+};
+
+function prosesAksaraAsal(aksaraAsals) {
     // Jika spasi saja, tidak diproses
     if (!aksaraAsals.replace(/\s/g, '').length) {
         aksaraAsal.classList.remove("aksaraLampung");
         hasilTerjemah.innerHTML = 'Silakan mengaksarakan';
-        hasilTerjemah.classList.remove("alert", "alert-info", "alert-warning");
-        hasilTerjemah.classList.add("alert", "alert-info");
+        hasilTerjemah.classList.remove("hasil-transliterasi");
+        hasilTerjemah.classList.add("hasil-transliterasi");
     } else {
         aksaraAsal.classList.add("aksaraLampung");
         // Mengubah kata/kalimat yang diketik menjadi array String
@@ -70,7 +76,7 @@ aksaraAsal.onkeyup = function () {
 
         //Mengosongkan nilai dan menghilangkan style
         hasilTerjemah.innerHTML = '';
-        hasilTerjemah.classList.remove("alert", "alert-info", "alert-warning");
+        hasilTerjemah.classList.remove("hasil-transliterasi");
         let strong = createNode("strong");
         strong.innerHTML = alfabetkan(aksaraAsal.value) + ' : <br/>';
         let spanAksara = createNode('span');
@@ -83,6 +89,49 @@ aksaraAsal.onkeyup = function () {
             spanAksara.innerHTML += aksaraAl[i] + ' ';
         }
 
-        hasilTerjemah.classList.add("alert", "alert-info");
+        hasilTerjemah.classList.add("hasil-transliterasi");
     }
-};
+}
+
+window.addEventListener('keydown', function (e) {
+    // console.log(e.keyCode);
+    const keybutton = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    // this.console.log(keybutton.getAttribute("data-key"));
+    if (!keybutton) return;
+    ketikAksara(keybutton);
+});
+
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return; // skip if no transform
+    this.classList.remove('tekan');
+}
+
+function ketikAksara(e) {
+    // console.log(e);
+    const keychar = e.querySelector(".kbd");
+
+    // console.log(keychar.textContent);
+
+    if (keychar.textContent === "⬾") {
+        aksaraAsal.value = aksaraAsal.value.slice(0, -1);
+    } else {
+        aksaraAsal.value += keychar.textContent;
+    }
+    prosesAksaraAsal(aksaraAsal.value);
+    e.classList.add("tekan");
+}
+
+const keybuttons = document.querySelectorAll(`button`);
+keybuttons.forEach(keyb => keyb.addEventListener('transitionend', removeTransition));
+keybuttons.forEach(keyb => keyb.addEventListener('click', function () {
+    ketikAksara(keyb);
+}));
+
+var inputs = document.querySelectorAll("input");
+inputs.forEach(input =>
+    input.addEventListener('keydown', function (e) {
+        e.stopPropagation();
+        const keybutton = document.querySelector(`button[data-key="${e.keyCode}"]`);
+        keybutton.classList.add("tekan");
+    }, false)
+);
