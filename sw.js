@@ -1,4 +1,4 @@
-var VERSION = "KetikAksaraLampung-v20181202";
+var VERSION = "KetikAksaraLampung-v2018120203";
 
 var fileCache = [
   // './',
