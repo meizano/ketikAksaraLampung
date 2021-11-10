@@ -52,8 +52,8 @@ kataAsal.onkeyup = function () {
 
 aksaraAsal.onkeyup = function () {
     prosesAksaraAsal(aksaraAsal.value);
-    aksaraAsal.blur(); // blur agar soft keyboard dari os tidak tampil otomatis
-    aksaraAsal.focus(); // blur agar soft keyboard dari os tidak tampil otomatis
+    // aksaraAsal.blur(); // blur agar soft keyboard dari os tidak tampil otomatis
+    // aksaraAsal.focus(); // blur agar soft keyboard dari os tidak tampil otomatis
 
 
 };
